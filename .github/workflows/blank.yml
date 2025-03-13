@@ -27,15 +27,11 @@ jobs:
 
     - name: Download MKV file
       run: |
-        curl -L -o video.mkv "https://tipistream.tipikuy.workers.dev/0:/GDToT/Busanhaeng.aka.Train.to.Busan.2016.1080p.BluRay.x264.DD5.1-Pahe.in.mkv"
-
-    - name: Download Subtitle file
-      run: |
-        curl -L -o subtitle.srt "https://str.tipiku.my.id/hardsub/movie/Train.to.Busan.2016.srt"
+        curl -L -o video.mkv "https://tipistream.tipikuy.workers.dev/0:/MirrorFolder%20oleh%20moona_mirrorbot/Wanita.Ahli.Neraka.2024.1080p.NF.WEB-DL.DDP5.1.H.264-KQRM.mkv"
 
     - name: Convert MKV to MP4
       run: |
-        ffmpeg -i video.mkv -vf "scale=1920:1080,subtitles=subtitle.srt" -r 24 -c:v libx264 -preset veryfast -crf 22 -c:a aac -b:a 160k -ac 2 -af "volume=2.0" -movflags +faststart video.mp4
+        ffmpeg -i video.mkv -vf "crop=1920:818:0:140,scale=1920:1080,subtitles=video.mkv:si=2:force_style='Fontsize=18'" -r 24 -c:v libx264 -preset veryfast -crf 22 -c:a aac -b:a 160k -ac 2 -af "volume=2.5" -movflags +faststart video.mp4
 
     - name: Upload to Google Drive
       run: python3 upload_to_gdrive.py video.mp4
