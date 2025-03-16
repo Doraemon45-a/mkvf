@@ -27,7 +27,7 @@ jobs:
 
     - name: Download MKV file
       run: |
-        curl -L -o video.mkv "https://tipistream.tipikuy.workers.dev/0:/series/Solo%20Leveling%20S01/Solo.Leveling.S01E06.The.Real.Hunt.Begins.1080p.BluRay.x265.AAC2.0-Pahe.ink.mkv"
+        curl -L -o video.mkv "https://tipistream.tipikuy.workers.dev/0:/series/Solo%20Leveling%20S01/Solo.Leveling.S01E08.This.Is.Frustrating.1080p.BluRay.x265.AAC2.0-Pahe.ink.mkv"
 
     - name: Convert MKV to MP4
       run: |
