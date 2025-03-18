@@ -27,7 +27,7 @@ jobs:
 
     - name: Download MKV file
       run: |
-        curl -L -o video.mkv "https://tipistream.tipikuy.workers.dev/0:/series/%5BKusonime%5DChikyuu%20no%20Undou%20ni%20Tsuite/[Kusonime]%20Chi.%20Chikyuu%20no%20Undou%20ni%20Tsuite%20-%2002.mkv"
+        curl -L -o video.mkv "https://tipistream.tipikuy.workers.dev/0:/series/mkv/Tsuite%20-%2002.mkv"
 
     - name: Convert MKV to MP4
       run: |
