@@ -27,7 +27,7 @@ jobs:
 
     - name: Download MKV file
       run: |
-        curl -L -o video.mkv "https://tipigd.tipikus.workers.dev/0:/MirrorFolder%20oleh%20kobomirrorbot/Gannibal.S02E06.Uprising.1080p.WEB-DL.x265.6CH-Pahe.in.mk"
+        curl -L -o video.mkv "https://tipigd.tipikus.workers.dev/0:/MirrorFolder%20oleh%20kobomirrorbot/Gannibal.S02E06.Uprising.1080p.WEB-DL.x265.6CH-Pahe.in.mkv"
 
     - name: Convert MKV to MP4
       run: |
