@@ -27,11 +27,11 @@ jobs:
 
     - name: Download MKV file
       run: |
-        curl -L -o video.mkv "https://tipistream.tipikuy.workers.dev/0:/MirrorFolder%20oleh%20Pik4bot/Hyper.Knife.S01E06.Episode.6.1080p.WEB-DL.x265.6CH-Pahe.in.mkv"
+        curl -L -o video.mkv "https://tipigd.tipikus.workers.dev/0:/MirrorFolder%20oleh%20kobomirrorbot/Gannibal.S02E06.Uprising.1080p.WEB-DL.x265.6CH-Pahe.in.mk"
 
     - name: Convert MKV to MP4
       run: |
-        ffmpeg -i video.mkv -vf "scale=1920:1080,subtitles=video.mkv:si=8:force_style='Fontsize=18,MarginV=25,PrimaryColour=&H0000FFFF'" -r 24 -c:v libx264 -preset veryfast -crf 24 -c:a aac -b:a 160k -ac 2 -af "volume=2.5" -movflags +faststart video.mp4
+        ffmpeg -i video.mkv -vf "scale=1920:1080,subtitles=video.mkv:si=7:force_style='Fontsize=18,MarginV=25,PrimaryColour=&H0000FFFF'" -r 24 -c:v libx264 -preset veryfast -crf 24 -c:a aac -b:a 160k -ac 2 -af "volume=2.5" -movflags +faststart video.mp4
 
     - name: Upload to Google Drive
       run: python3 upload_to_gdrive.py video.mp4
